@@ -7,7 +7,7 @@ const app = express();
 require("dotenv").config();
 
 app.use(cors({ origin: "*" }));
-app.use(express.static('../../uploads'));
+app.use(express.static('./uploads'));
 app.use(bodyParser.json());   // parse requests of content-type - application/json
 app.use(bodyParser.urlencoded({ extended: false }));   // parse requests of content-type - application/x-www-form-urlencoded
 

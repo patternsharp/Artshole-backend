@@ -22,8 +22,8 @@ const multiUpload = require('../utils/multiUpload')
 module.exports = function (app) {
   // authentication api
   app.get("/api/account/my-account", authController.Welcome);
-  // app.post("/api/signup", authController.SignUp);
-  app.post("/api/signup", (req, res) => {res.send({message : 'this is test'})});
+  app.post("/api/signup", authController.SignUp);
+  // app.post("/api/signup", (req, res) => {res.send({message : 'this is test'})});
   app.post("/api/signupWithGoogle", authController.SignUpWithGoogle);
   app.post("/api/signin", authController.SignIn);
   app.post("/api/signinWithGoogle", authController.SignInWithGoogle);
