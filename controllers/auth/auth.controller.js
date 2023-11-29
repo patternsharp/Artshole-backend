@@ -195,7 +195,8 @@ exports.SignUp = async (req, res) => {
       password: password,
       subscribe: subscribe,
       emailVerifyToken: emailVerifyToken,
-      emailVerifyExpiry: emailVerifyExpiry
+      emailVerifyExpiry: emailVerifyExpiry,
+      isVerified : true
     });
 
     const salt = await bcrypt.genSalt(10);
@@ -204,14 +205,14 @@ exports.SignUp = async (req, res) => {
 
     await user.save();
 
-    await sendEmail({
-      email: user.email,
-      templateId: process.env.SENDGRID_RESET_TEMPLATEID,
-      data: {
-        name: user.fullName,
-        emailVerifyUrl: emailVerifyUrl
-      }
-    });
+    // await sendEmail({
+    //   email: user.email,
+    //   templateId: process.env.SENDGRID_RESET_TEMPLATEID,
+    //   data: {
+    //     name: user.fullName,
+    //     emailVerifyUrl: emailVerifyUrl
+    //   }
+    // });
 
     return res.status(200).send({ status: true, message: "Register Successfully.", });
   } catch (error) {
@@ -227,8 +228,6 @@ exports.SignUpWithGoogle = async (req, res) => {
 
     const verificationResponse = await verifyGoogleToken(tokens?.id_token);
     const payload = verificationResponse.payload;
-
-    console.log("payload=>>", payload)
 
     let userExists = await User.findOne({
       isDeleted: false,
@@ -256,7 +255,8 @@ exports.SignUpWithGoogle = async (req, res) => {
       password: payload.sub,
       subscribe: true,
       emailVerifyToken: emailVerifyToken,
-      emailVerifyExpiry: emailVerifyExpiry
+      emailVerifyExpiry: emailVerifyExpiry,
+      isVerified : true
     });
 
     const salt = await bcrypt.genSalt(10);
@@ -265,14 +265,14 @@ exports.SignUpWithGoogle = async (req, res) => {
 
     await user.save();
 
-    await sendEmail({
-      email: user.email,
-      templateId: process.env.SENDGRID_RESET_TEMPLATEID,
-      data: {
-        name: user.fullName,
-        emailVerifyUrl: emailVerifyUrl
-      }
-    });
+    // await sendEmail({
+    //   email: user.email,
+    //   templateId: process.env.SENDGRID_RESET_TEMPLATEID,
+    //   data: {
+    //     name: user.fullName,
+    //     emailVerifyUrl: emailVerifyUrl
+    //   }
+    // });
 
     return res.status(200).send({ status: true, message: "Register Successfully.", email: payload.email });
   } catch (error) {
