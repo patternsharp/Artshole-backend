@@ -1,8 +1,7 @@
 const ArtistCategory = require("../../models/ArtistCategory");
 const JobCategory = require("../../models/JobCategory");
 const ArtworkCategory = require("../../models/ArtworkCategory");
-const CollectionCategory = require("../../models/CollectionCategory")
-
+const CollectionCategory = require("../../models/CollectionCategory");
 
 // Function that Add Artist Category items
 exports.AddArtistCategory = async (req, res) => {
@@ -12,7 +11,9 @@ exports.AddArtistCategory = async (req, res) => {
     let artist_Category = await ArtistCategory.findOne({ itemTitle });
 
     if (artist_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
     artist_Category = new ArtistCategory({
@@ -21,13 +22,23 @@ exports.AddArtistCategory = async (req, res) => {
 
     await artist_Category.save((error) => {
       if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
+        return res
+          .status(500)
+          .send({ status: false, message: "Internal server error" });
       }
-      return res.status(200).send({ status: true, message: "Added successfully.", result: artist_Category });
+      return res
+        .status(200)
+        .send({
+          status: true,
+          message: "Added successfully.",
+          result: artist_Category,
+        });
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -38,7 +49,9 @@ exports.GetArtistCategory = async (req, res) => {
     res.status(200).send(artist_Category_List);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -50,41 +63,54 @@ exports.UpdateArtistCategory = async (req, res) => {
     let artist_Category = await ArtistCategory.findOne({ itemTitle });
 
     if (artist_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
-    ArtistCategory.findByIdAndUpdate(itemId, { itemTitle: itemTitle }, (error) => {
-      if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
-      }
-      return res.status(200).send({ status: true, message: "Updated successfully." });
-    });
+    ArtistCategory.findByIdAndUpdate(
+      itemId,
+      { itemTitle: itemTitle },
+      (error) => {
+        if (error) {
+          return res
+            .status(500)
+            .send({ status: false, message: "Internal server error" });
+        }
+        return res
+          .status(200)
+          .send({ status: true, message: "Updated successfully." });
+      },
+    );
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
 // Function that Delete Artist Category items
 exports.DeleteArtistCategory = async (req, res) => {
-  console.log("delete item=>", req.body.itemId)
+  console.log("delete item=>", req.body.itemId);
   try {
     if (req.body && req.body.itemId) {
       const response = await ArtistCategory.deleteOne({ _id: req.body.itemId });
-      return res.status(200).send({ status: true, message: "Deleted successfully." });
+      return res
+        .status(200)
+        .send({ status: true, message: "Deleted successfully." });
     } else {
-      return res.status(400).send({ sataus: false, message: "Something went wrong!" });
+      return res
+        .status(400)
+        .send({ sataus: false, message: "Something went wrong!" });
     }
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
-
-
-
-
-
 
 // Function that Add Job Category items
 exports.AddJobCategory = async (req, res) => {
@@ -94,7 +120,9 @@ exports.AddJobCategory = async (req, res) => {
     let job_Category = await JobCategory.findOne({ itemTitle });
 
     if (job_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
     job_Category = new JobCategory({
@@ -103,13 +131,23 @@ exports.AddJobCategory = async (req, res) => {
 
     await job_Category.save((error) => {
       if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
+        return res
+          .status(500)
+          .send({ status: false, message: "Internal server error" });
       }
-      return res.status(200).send({ status: true, message: "Added successfully.", result: job_Category });
+      return res
+        .status(200)
+        .send({
+          status: true,
+          message: "Added successfully.",
+          result: job_Category,
+        });
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -120,7 +158,9 @@ exports.GetJobCategory = async (req, res) => {
     res.status(200).send(job_Category_List);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -132,37 +172,50 @@ exports.UpdateJobCategory = async (req, res) => {
     let job_Category = await JobCategory.findOne({ itemTitle });
 
     if (job_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
     JobCategory.findByIdAndUpdate(itemId, { itemTitle: itemTitle }, (error) => {
       if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
+        return res
+          .status(500)
+          .send({ status: false, message: "Internal server error" });
       }
-      return res.status(200).send({ status: true, message: "Updated successfully." });
+      return res
+        .status(200)
+        .send({ status: true, message: "Updated successfully." });
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
 // Function that Delete Job Category items
 exports.DeleteJobCategory = async (req, res) => {
-  console.log("delete item=>", req.body.itemId)
+  console.log("delete item=>", req.body.itemId);
   try {
     if (req.body && req.body.itemId) {
       const response = await JobCategory.deleteOne({ _id: req.body.itemId });
-      return res.status(200).send({ status: true, message: "Deleted successfully." });
+      return res
+        .status(200)
+        .send({ status: true, message: "Deleted successfully." });
     } else {
-      return res.status(400).send({ sataus: false, message: "Something went wrong!" });
+      return res
+        .status(400)
+        .send({ sataus: false, message: "Something went wrong!" });
     }
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
-
 
 // Function that Add Artwork Category items
 exports.AddArtworkCategory = async (req, res) => {
@@ -172,7 +225,9 @@ exports.AddArtworkCategory = async (req, res) => {
     let art_Category = await ArtworkCategory.findOne({ itemTitle });
 
     if (art_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
     art_Category = new ArtworkCategory({
@@ -181,13 +236,23 @@ exports.AddArtworkCategory = async (req, res) => {
 
     await art_Category.save((error) => {
       if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
+        return res
+          .status(500)
+          .send({ status: false, message: "Internal server error" });
       }
-      return res.status(200).send({ status: true, message: "Added successfully.", result: art_Category });
+      return res
+        .status(200)
+        .send({
+          status: true,
+          message: "Added successfully.",
+          result: art_Category,
+        });
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -198,7 +263,9 @@ exports.GetArtworkCategory = async (req, res) => {
     res.status(200).send(art_Category_List);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -210,37 +277,56 @@ exports.UpdateArtworkCategory = async (req, res) => {
     let art_Category = await ArtworkCategory.findOne({ itemTitle });
 
     if (art_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
-    ArtworkCategory.findByIdAndUpdate(itemId, { itemTitle: itemTitle }, (error) => {
-      if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
-      }
-      return res.status(200).send({ status: true, message: "Updated successfully." });
-    });
+    ArtworkCategory.findByIdAndUpdate(
+      itemId,
+      { itemTitle: itemTitle },
+      (error) => {
+        if (error) {
+          return res
+            .status(500)
+            .send({ status: false, message: "Internal server error" });
+        }
+        return res
+          .status(200)
+          .send({ status: true, message: "Updated successfully." });
+      },
+    );
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
 // Function that Delete Artwork Category items
 exports.DeleteArtworkCategory = async (req, res) => {
-  console.log("delete item=>", req.body.itemId)
+  console.log("delete item=>", req.body.itemId);
   try {
     if (req.body && req.body.itemId) {
-      const response = await ArtworkCategory.deleteOne({ _id: req.body.itemId });
-      return res.status(200).send({ status: true, message: "Deleted successfully." });
+      const response = await ArtworkCategory.deleteOne({
+        _id: req.body.itemId,
+      });
+      return res
+        .status(200)
+        .send({ status: true, message: "Deleted successfully." });
     } else {
-      return res.status(400).send({ sataus: false, message: "Something went wrong!" });
+      return res
+        .status(400)
+        .send({ sataus: false, message: "Something went wrong!" });
     }
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
-
 
 // Function that Add Collection Category items
 exports.AddCollectionCategory = async (req, res) => {
@@ -250,7 +336,9 @@ exports.AddCollectionCategory = async (req, res) => {
     let collection_Category = await CollectionCategory.findOne({ itemTitle });
 
     if (collection_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
     collection_Category = new CollectionCategory({
@@ -259,13 +347,23 @@ exports.AddCollectionCategory = async (req, res) => {
 
     await collection_Category.save((error) => {
       if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
+        return res
+          .status(500)
+          .send({ status: false, message: "Internal server error" });
       }
-      return res.status(200).send({ status: true, message: "Added successfully.", result: collection_Category });
+      return res
+        .status(200)
+        .send({
+          status: true,
+          message: "Added successfully.",
+          result: collection_Category,
+        });
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -276,7 +374,9 @@ exports.GetCollectionCategory = async (req, res) => {
     res.status(200).send(collection_Category_List);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -288,33 +388,53 @@ exports.UpdateCollectionCategory = async (req, res) => {
     let collection_Category = await CollectionCategory.findOne({ itemTitle });
 
     if (collection_Category) {
-      return res.status(400).send({ status: false, message: "This Category item already exists" });
+      return res
+        .status(400)
+        .send({ status: false, message: "This Category item already exists" });
     }
 
-    CollectionCategory.findByIdAndUpdate(itemId, { itemTitle: itemTitle }, (error) => {
-      if (error) {
-        return res.status(500).send({ status: false, message: 'Internal server error' });
-      }
-      return res.status(200).send({ status: true, message: "Updated successfully." });
-    });
+    CollectionCategory.findByIdAndUpdate(
+      itemId,
+      { itemTitle: itemTitle },
+      (error) => {
+        if (error) {
+          return res
+            .status(500)
+            .send({ status: false, message: "Internal server error" });
+        }
+        return res
+          .status(200)
+          .send({ status: true, message: "Updated successfully." });
+      },
+    );
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
 // Function that Delete Collection Category items
 exports.DeleteCollectionCategory = async (req, res) => {
-  console.log("delete item=>", req.body.itemId)
+  console.log("delete item=>", req.body.itemId);
   try {
     if (req.body && req.body.itemId) {
-      const response = await CollectionCategory.deleteOne({ _id: req.body.itemId });
-      return res.status(200).send({ status: true, message: "Deleted successfully." });
+      const response = await CollectionCategory.deleteOne({
+        _id: req.body.itemId,
+      });
+      return res
+        .status(200)
+        .send({ status: true, message: "Deleted successfully." });
     } else {
-      return res.status(400).send({ sataus: false, message: "Something went wrong!" });
+      return res
+        .status(400)
+        .send({ sataus: false, message: "Something went wrong!" });
     }
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
