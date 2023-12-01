@@ -6,10 +6,10 @@ const uuid = require("uuid");
 const storage = multer.diskStorage({
   destination: function (req, file, callback) {
     if (file.fieldname === "avatarUrl") {
-      callback(null, '../../uploads/avatar/')
+      callback(null, './uploads/avatar/')
     }
     else if (file.fieldname === "coverImg") {
-      callback(null, '../../uploads/cover/');
+      callback(null, './uploads/cover/');
     }
     else if (file.fieldname === "artworkImg") {
       callback(null, '../../uploads/artwork/');
