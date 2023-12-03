@@ -5,8 +5,9 @@ let userSchema = new Schema({
   role: {
     type: String, // client or admin
     required: true,
+    default : "client"
   },
-  fullName: {
+  fullName: { 
     type: String,
     required: true,
   },
@@ -37,11 +38,11 @@ let userSchema = new Schema({
   },
   avatarUrl: {
     type: String,
-    default: "",
+    default: "default.jpg",
   },
   coverImg: {
     type: String,
-    default: "",
+    default: "default.jpg",
   },
   clientJob: {
     type: String,

@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
     }
   },
   filename: function (req, file, callback) {
-    // callback(null, "upload_" + file.fieldname + "_" + Date.now() + path.extname(file.originalname));
     callback(
       null,
       "upload_" + file.fieldname + "_" + uuid.v4() + "_" + Date.now() + ".jpg",

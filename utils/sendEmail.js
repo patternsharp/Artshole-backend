@@ -12,8 +12,7 @@ const sendEmail = async (options) => {
   sgMail
     .send(msg)
     .then(() => {
-      console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-      console.log("Email Sent");
+      console.log("Verificatoin link Sent");
     })
     .catch((error) => {
       console.error(error);

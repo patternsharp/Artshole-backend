@@ -20,10 +20,8 @@ const upload = require("../utils/multerConfig");
 const multiUpload = require("../utils/multiUpload");
 
 module.exports = function (app) {
-  // authentication api
   app.get("/api/account/my-account", authController.Welcome);
   app.post("/api/signup", authController.SignUp);
-  // app.post("/api/signup", (req, res) => {res.send({message : 'this is test'})});
   app.post("/api/signupWithGoogle", authController.SignUpWithGoogle);
   app.post("/api/signin", authController.SignIn);
   app.post("/api/signinWithGoogle", authController.SignInWithGoogle);
@@ -36,8 +34,6 @@ module.exports = function (app) {
   app.put("/api/password/reset/:token", authController.ResetPassword);
   app.post("/api/delete-account", authController.DeleteAccount);
 
-  //=========Client Panel==============
-  //user api
   app.get("/api/user/manage-artists", userController.GetAllArtists);
   app.post("/api/user/artists", userController.GetInitialArtists);
   app.post("/api/user/social/follow", userController.ToggleFollow);
@@ -45,16 +41,15 @@ module.exports = function (app) {
   app.post("/api/user/get-oneuser", userController.GetUserDetailsByScreenName);
   app.post("/api/user/report", userController.ReportUser);
 
-  //artwork api
   app.post(
     "/api/artwork/add-artwork",
     multiUpload(),
-    artworkController.AddArtwork,
+    artworkController.AddArtwork
   );
   app.post(
     "/api/artwork/update-artwork",
     multiUpload(),
-    artworkController.UpdateArtwork,
+    artworkController.UpdateArtwork
   );
   app.post("/api/artwork/delete-artwork", artworkController.DeleteArtwork);
   app.get("/api/artwork/get-artworks", artworkController.GetClientArtworks);
@@ -62,197 +57,178 @@ module.exports = function (app) {
   app.post("/api/artwork/view", artworkController.ViewCountArtwork);
   app.post("/api/artwork/like", artworkController.ToggleLike);
 
-  //collection api
   app.post(
     "/api/collection/add-collection",
     upload(),
-    collectionController.AddCollection,
+    collectionController.AddCollection
   );
   app.post(
     "/api/collection/update-collection",
-    collectionController.UpdateCollection,
+    collectionController.UpdateCollection
   );
   app.post(
     "/api/collection/delete-collection",
-    collectionController.DeleteCollection,
+    collectionController.DeleteCollection
   );
   app.get(
     "/api/collection/get-collections",
-    collectionController.GetClientCollections,
+    collectionController.GetClientCollections
   );
   app.post(
     "/api/collection/initial",
-    collectionController.GetInitialCollectionsByUser,
+    collectionController.GetInitialCollectionsByUser
   );
   app.get("/api/collection/search", collectionController.SearchCollections);
   app.post("/api/collection/view", collectionController.ViewCountCollection);
   app.post(
     "/api/collection/get-onecollection",
-    collectionController.GetCollectionDetailsById,
+    collectionController.GetCollectionDetailsById
   );
   app.post(
     "/api/collection/my-collections",
-    collectionController.GetMyCollections,
+    collectionController.GetMyCollections
   );
   app.post(
     "/api/collection/update-artwork",
-    collectionController.UpdateArtworkOnCollection,
+    collectionController.UpdateArtworkOnCollection
   );
 
-  //video api
   app.post("/api/video/add-video", videoController.AddVideo);
   app.post("/api/video/update-video", videoController.UpdateVideo);
   app.post("/api/video/delete-video", videoController.DeleteVideo);
   app.get("/api/video/get-videos", videoController.GetClientVideos);
 
-  //comment api
   app.post("/api/comment/add-comment", commentController.AddComment);
-
-  // message api
   app.post("/api/message/new-message", messageController.NewMessage);
   app.get("/api/message/get-messages/:chatId", messageController.GetMessages);
 
-  // chat api
   app.post("/api/chat/new-chat", chatController.NewChat);
   app.get("/api/chat/get-chats/:userId", chatController.GetChats);
 
-  //notification management api
   app.post(
     "/api/notification/add-notification",
-    notificationController.AddNotification,
+    notificationController.AddNotification
   );
   app.post(
     "/api/notification/get-notifications",
-    notificationController.GetNotifications,
+    notificationController.GetNotifications
   );
   app.post(
     "/api/notification/read-notifications",
-    notificationController.ReadNotifications,
+    notificationController.ReadNotifications
   );
   app.post(
     "/api/notification/delete-notifications",
-    notificationController.DeleteNotifications,
+    notificationController.DeleteNotifications
   );
 
-  //=========Admin Panel==============
-  //user management api
   app.get("/api/manage/user/manage-users", userManageController.GetAllUsers);
   app.post("/api/manage/user/delete-user", userManageController.DeleteUser);
 
-  //artist category management api
   app.post(
     "/api/manage/category/add-artist-category",
-    categoryManageController.AddArtistCategory,
+    categoryManageController.AddArtistCategory
   );
   app.get(
     "/api/manage/category/get-artist-category",
-    categoryManageController.GetArtistCategory,
+    categoryManageController.GetArtistCategory
   );
   app.post(
     "/api/manage/category/update-artist-category",
-    categoryManageController.UpdateArtistCategory,
+    categoryManageController.UpdateArtistCategory
   );
   app.post(
     "/api/manage/category/delete-artist-category",
-    categoryManageController.DeleteArtistCategory,
+    categoryManageController.DeleteArtistCategory
   );
 
-  //job category management api
   app.post(
     "/api/manage/category/add-job-category",
-    categoryManageController.AddJobCategory,
+    categoryManageController.AddJobCategory
   );
   app.get(
     "/api/manage/category/get-job-category",
-    categoryManageController.GetJobCategory,
+    categoryManageController.GetJobCategory
   );
   app.post(
     "/api/manage/category/update-job-category",
-    categoryManageController.UpdateJobCategory,
+    categoryManageController.UpdateJobCategory
   );
   app.post(
     "/api/manage/category/delete-job-category",
-    categoryManageController.DeleteJobCategory,
+    categoryManageController.DeleteJobCategory
   );
 
-  //artwork category management api
   app.post(
     "/api/manage/category/add-artwork-category",
-    categoryManageController.AddArtworkCategory,
+    categoryManageController.AddArtworkCategory
   );
   app.get(
     "/api/manage/category/get-artwork-category",
-    categoryManageController.GetArtworkCategory,
+    categoryManageController.GetArtworkCategory
   );
   app.post(
     "/api/manage/category/update-artwork-category",
-    categoryManageController.UpdateArtworkCategory,
+    categoryManageController.UpdateArtworkCategory
   );
   app.post(
     "/api/manage/category/delete-artwork-category",
-    categoryManageController.DeleteArtworkCategory,
+    categoryManageController.DeleteArtworkCategory
   );
 
-  //collection category management api
   app.post(
     "/api/manage/category/add-collection-category",
-    categoryManageController.AddCollectionCategory,
+    categoryManageController.AddCollectionCategory
   );
   app.get(
     "/api/manage/category/get-collection-category",
-    categoryManageController.GetCollectionCategory,
+    categoryManageController.GetCollectionCategory
   );
   app.post(
     "/api/manage/category/update-collection-category",
-    categoryManageController.UpdateCollectionCategory,
+    categoryManageController.UpdateCollectionCategory
   );
   app.post(
     "/api/manage/category/delete-collection-category",
-    categoryManageController.DeleteCollectionCategory,
+    categoryManageController.DeleteCollectionCategory
   );
 
-  //artwork management api
   app.get(
     "/api/manage/artwork/get-artwork",
-    artworkManageController.GetAllArtworks,
+    artworkManageController.GetAllArtworks
   );
 
-  //artwork property management api
   app.post(
     "/api/manage/property/add-artwork-property",
-    artPropertyMController.AddArtworkProperty,
+    artPropertyMController.AddArtworkProperty
   );
   app.get(
     "/api/manage/property/get-artwork-property",
-    artPropertyMController.GetArtworkProperty,
+    artPropertyMController.GetArtworkProperty
   );
   app.post(
     "/api/manage/property/update-artwork-property",
-    artPropertyMController.UpdateArtworkProperty,
+    artPropertyMController.UpdateArtworkProperty
   );
   app.post(
     "/api/manage/property/delete-artwork-property",
-    artPropertyMController.DeleteArtworkProperty,
+    artPropertyMController.DeleteArtworkProperty
   );
 
-  //collection management api
   app.get(
     "/api/manage/collection/get-collection",
-    collectionManageController.GetAllCollections,
+    collectionManageController.GetAllCollections
   );
 
-  //comment management api
   app.post(
     "/api/manage/comment/get-comment",
-    commentManageController.GetComments,
+    commentManageController.GetComments
   );
   app.post(
     "/api/manage/comment/add-comment",
-    commentManageController.AddComment,
+    commentManageController.AddComment
   );
 
-  //analysis api
   app.get("/api/day/all-visitors", analysisManageController.GetAllVisitors);
   app.get("/api/new-users", analysisManageController.GetNewUsers);
-  // app.get()
 };

@@ -1,0 +1,137 @@
+{
+    "_id" : ObjectId("656baea39371a18d001aa2a5"),
+    "itemTitle" : "STYLE",
+    "parentId" : "0",
+    "createdAt" : ISODate("2023-12-02T22:24:35.974+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T22:24:35.974+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656baeb49371a18d001aa2ab"),
+    "itemTitle" : "SUBJECT",
+    "createdAt" : ISODate("2023-12-02T22:24:52.093+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T22:24:52.093+0000"),
+    "__v" : NumberInt(0),
+    "parentId" : "0"
+}
+{
+    "_id" : ObjectId("656baed09371a18d001aa2b5"),
+    "itemTitle" : "MEDIUM",
+    "parentId" : "0",
+    "createdAt" : ISODate("2023-12-02T22:25:20.365+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T22:25:20.365+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656baed89371a18d001aa2b8"),
+    "itemTitle" : "MATERIAL",
+    "parentId" : "0",
+    "createdAt" : ISODate("2023-12-02T22:25:28.676+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T22:25:28.676+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bb04024ff8b2eaa0c98a0"),
+    "itemTitle" : "Abstract",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04124ff8b2eaa0c98a1"),
+    "itemTitle" : "Abstract Expressionism",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04224ff8b2eaa0c98a2"),
+    "itemTitle" : "Modern",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04224ff8b2eaa0c98a3"),
+    "itemTitle" : "Fine Art",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04224ff8b2eaa0c98a4"),
+    "itemTitle" : "Expressionism",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04324ff8b2eaa0c98a5"),
+    "itemTitle" : "Minimalism",
+    "parentId" : "656baea39371a18d001aa2a5"
+}
+{
+    "_id" : ObjectId("656bb04324ff8b2eaa0c98a6"),
+    "itemTitle" : "Abstract",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb04324ff8b2eaa0c98a7"),
+    "itemTitle" : "Landscape",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb04324ff8b2eaa0c98a8"),
+    "itemTitle" : "Nature",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb04324ff8b2eaa0c98a9"),
+    "itemTitle" : "Floral",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb04424ff8b2eaa0c98aa"),
+    "itemTitle" : "Geometric",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb0ca24ff8b2eaa0c98d5"),
+    "itemTitle" : "Portrait",
+    "parentId" : "656baeb49371a18d001aa2ab"
+}
+{
+    "_id" : ObjectId("656bb0ec24ff8b2eaa0c98e9"),
+    "itemTitle" : "Acrylic",
+    "parentId" : "656baed09371a18d001aa2b5"
+}
+{
+    "_id" : ObjectId("656bb0ec24ff8b2eaa0c98ea"),
+    "itemTitle" : "Watercolor",
+    "parentId" : "656baed09371a18d001aa2b5"
+}
+{
+    "_id" : ObjectId("656bb0ed24ff8b2eaa0c98eb"),
+    "itemTitle" : "Gesso",
+    "parentId" : "656baed09371a18d001aa2b5"
+}
+{
+    "_id" : ObjectId("656bb0ed24ff8b2eaa0c98ec"),
+    "itemTitle" : "Spray Paint",
+    "parentId" : "656baed09371a18d001aa2b5"
+}
+{
+    "_id" : ObjectId("656bb0ed24ff8b2eaa0c98ed"),
+    "itemTitle" : "Paper",
+    "parentId" : "656baed09371a18d001aa2b5"
+}
+{
+    "_id" : ObjectId("656bb0ee24ff8b2eaa0c98ee"),
+    "itemTitle" : "Canvas",
+    "parentId" : "656baed89371a18d001aa2b8"
+}
+{
+    "_id" : ObjectId("656bb0ee24ff8b2eaa0c98ef"),
+    "itemTitle" : "Paper",
+    "parentId" : "656baed89371a18d001aa2b8"
+}
+{
+    "_id" : ObjectId("656bb0ef24ff8b2eaa0c98f0"),
+    "itemTitle" : "Cardbpard",
+    "parentId" : "656baed89371a18d001aa2b8"
+}
+{
+    "_id" : ObjectId("656bb0ef24ff8b2eaa0c98f1"),
+    "itemTitle" : "Soft(Yarn, Cotton, Fabric)",
+    "parentId" : "656baed89371a18d001aa2b8"
+}

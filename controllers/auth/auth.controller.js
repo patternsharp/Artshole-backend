@@ -74,7 +74,6 @@ exports.Welcome = async (req, res) => {
   }
 };
 
-// Login function
 exports.SignIn = async (req, res) => {
   try {
     const { email, password, remember } = req.body;
@@ -83,6 +82,7 @@ exports.SignIn = async (req, res) => {
       .populate("jobCategory")
       .exec();
 
+    console.log('user data', user);
     if (!user) {
       return res
         .status(400)

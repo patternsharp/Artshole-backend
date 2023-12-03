@@ -77,7 +77,7 @@ exports.UpdateArtworkProperty = async (req, res) => {
         }
         return res
           .status(200)
-          .send({ status: true, message: "Updated successfully." });
+          .send({ status: true, message: "Updated successfully."});
       },
     );
   } catch (error) {
@@ -90,7 +90,7 @@ exports.UpdateArtworkProperty = async (req, res) => {
 
 // Function that Delete Artwork Property items
 exports.DeleteArtworkProperty = async (req, res) => {
-  console.log("delete item=>", req.body.itemId);
+  console.log("delete item12313131313=>", req.body.itemId);
   try {
     if (req.body && req.body.itemId) {
       const response = await ArtworkProperty.deleteOne({
