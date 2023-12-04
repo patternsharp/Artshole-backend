@@ -31,13 +31,11 @@ exports.AddCollection = async (req, res) => {
     await collection.save();
     await user.save();
 
-    return res
-      .status(200)
-      .send({
-        status: true,
-        message: "Added successfully.",
-        result: collection,
-      });
+    return res.status(200).send({
+      status: true,
+      message: "Added successfully.",
+      result: collection,
+    });
   } catch (error) {
     console.error(error);
     return res
@@ -89,12 +87,10 @@ exports.DeleteCollection = async (req, res) => {
     let collection = await Collection.find({ _id: itemId, isDeleted: false });
 
     if (!collection) {
-      return res
-        .status(400)
-        .send({
-          status: false,
-          message: "This collection has already been deleted.",
-        });
+      return res.status(400).send({
+        status: false,
+        message: "This collection has already been deleted.",
+      });
     }
 
     const filter = { _id: itemId };

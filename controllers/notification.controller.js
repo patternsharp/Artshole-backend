@@ -20,13 +20,11 @@ exports.AddNotification = async (req, res) => {
       .populate("fromUser")
       .exec();
 
-    return res
-      .status(200)
-      .send({
-        status: true,
-        message: "Added successfully.",
-        result: notification,
-      });
+    return res.status(200).send({
+      status: true,
+      message: "Added successfully.",
+      result: notification,
+    });
   } catch (error) {
     console.error(error);
     return res

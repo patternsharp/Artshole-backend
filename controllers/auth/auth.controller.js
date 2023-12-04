@@ -82,7 +82,7 @@ exports.SignIn = async (req, res) => {
       .populate("jobCategory")
       .exec();
 
-    console.log('user data', user);
+    console.log("user data", user);
     if (!user) {
       return res
         .status(400)
@@ -164,14 +164,12 @@ exports.SignInWithGoogle = async (req, res) => {
     }
 
     if (user.isVerified == false) {
-      return res
-        .status(200)
-        .send({
-          status: false,
-          code: 3,
-          message: "Not Verified",
-          email: payload.email,
-        });
+      return res.status(200).send({
+        status: false,
+        code: 3,
+        message: "Not Verified",
+        email: payload.email,
+      });
     }
 
     // const isValid = await bcrypt.compare(password, user.password)
@@ -327,13 +325,11 @@ exports.SignUpWithGoogle = async (req, res) => {
     //   }
     // });
 
-    return res
-      .status(200)
-      .send({
-        status: true,
-        message: "Register Successfully.",
-        email: payload.email,
-      });
+    return res.status(200).send({
+      status: true,
+      message: "Register Successfully.",
+      email: payload.email,
+    });
   } catch (error) {
     console.error(error);
     return res
@@ -505,12 +501,10 @@ exports.UserVerification = async (req, res) => {
     });
 
     if (!user) {
-      return res
-        .status(200)
-        .send({
-          status: false,
-          message: "User not found or Expired email verification link",
-        });
+      return res.status(200).send({
+        status: false,
+        message: "User not found or Expired email verification link",
+      });
     }
 
     const filter = { _id: user._id };
@@ -663,12 +657,10 @@ exports.ForgotPassword = async (req, res) => {
         },
       });
 
-      return res
-        .status(200)
-        .json({
-          status: true,
-          message: `We've sent a reset password link to: ${user.email}`,
-        });
+      return res.status(200).json({
+        status: true,
+        message: `We've sent a reset password link to: ${user.email}`,
+      });
     } catch (error) {
       console.error(error);
       return res

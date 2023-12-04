@@ -5,9 +5,9 @@ let userSchema = new Schema({
   role: {
     type: String, // client or admin
     required: true,
-    default : "client"
+    default: "client",
   },
-  fullName: { 
+  fullName: {
     type: String,
     required: true,
   },

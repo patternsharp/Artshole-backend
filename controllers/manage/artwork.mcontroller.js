@@ -8,13 +8,11 @@ exports.AddArtwork = async (req, res) => {
     let art = await Artwork.findOne({ title: req.body.title });
 
     if (art) {
-      return res
-        .status(400)
-        .json({
-          errors: [
-            { status: false, message: "This Category item already exists" },
-          ],
-        });
+      return res.status(400).json({
+        errors: [
+          { status: false, message: "This Category item already exists" },
+        ],
+      });
     }
 
     art = new Artwork();

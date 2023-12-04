@@ -20,8 +20,7 @@ exports.AddArtwork = async (req, res) => {
       propertyList,
     } = req.body;
 
-
-    console.log('this is property list',JSON.parse(propertyList));
+    console.log("this is property list", JSON.parse(propertyList));
     let artArr = [];
 
     if (req.files) {
@@ -52,7 +51,7 @@ exports.AddArtwork = async (req, res) => {
       status: status,
       category: category,
       year: year,
-      propertyList:JSON.parse(propertyList),
+      propertyList: JSON.parse(propertyList),
       lastUpdatedAt: Date(),
     });
 
@@ -188,12 +187,10 @@ exports.DeleteArtwork = async (req, res) => {
     let art = await Artwork.find({ _id: itemId, isDeleted: false });
 
     if (!art) {
-      return res
-        .status(400)
-        .send({
-          status: false,
-          message: "This artwork has already been deleted.",
-        });
+      return res.status(400).send({
+        status: false,
+        message: "This artwork has already been deleted.",
+      });
     }
 
     const filter = { _id: itemId };

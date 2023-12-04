@@ -94,12 +94,10 @@ exports.DeleteVideo = async (req, res) => {
     let video = await Video.find({ _id: itemId, isDeleted: false });
 
     if (!video) {
-      return res
-        .status(400)
-        .send({
-          status: false,
-          message: "This video has already been deleted.",
-        });
+      return res.status(400).send({
+        status: false,
+        message: "This video has already been deleted.",
+      });
     }
 
     const filter = { _id: itemId };

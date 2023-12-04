@@ -31,13 +31,11 @@ exports.AddComment = async (req, res) => {
 
     await one_comment.save();
 
-    return res
-      .status(200)
-      .send({
-        status: true,
-        message: "Added successfully",
-        result: one_comment,
-      });
+    return res.status(200).send({
+      status: true,
+      message: "Added successfully",
+      result: one_comment,
+    });
   } catch (error) {
     console.error(error);
     return res

@@ -26,13 +26,11 @@ exports.AddArtistCategory = async (req, res) => {
           .status(500)
           .send({ status: false, message: "Internal server error" });
       }
-      return res
-        .status(200)
-        .send({
-          status: true,
-          message: "Added successfully.",
-          result: artist_Category,
-        });
+      return res.status(200).send({
+        status: true,
+        message: "Added successfully.",
+        result: artist_Category,
+      });
     });
   } catch (error) {
     console.error(error);
@@ -136,13 +134,11 @@ exports.AddJobCategory = async (req, res) => {
           .status(500)
           .send({ status: false, message: "Internal server error" });
       }
-      return res
-        .status(200)
-        .send({
-          status: true,
-          message: "Added successfully.",
-          result: job_Category,
-        });
+      return res.status(200).send({
+        status: true,
+        message: "Added successfully.",
+        result: job_Category,
+      });
     });
   } catch (error) {
     console.error(error);
@@ -241,13 +237,11 @@ exports.AddArtworkCategory = async (req, res) => {
           .status(500)
           .send({ status: false, message: "Internal server error" });
       }
-      return res
-        .status(200)
-        .send({
-          status: true,
-          message: "Added successfully.",
-          result: art_Category,
-        });
+      return res.status(200).send({
+        status: true,
+        message: "Added successfully.",
+        result: art_Category,
+      });
     });
   } catch (error) {
     console.error(error);
@@ -352,13 +346,11 @@ exports.AddCollectionCategory = async (req, res) => {
           .status(500)
           .send({ status: false, message: "Internal server error" });
       }
-      return res
-        .status(200)
-        .send({
-          status: true,
-          message: "Added successfully.",
-          result: collection_Category,
-        });
+      return res.status(200).send({
+        status: true,
+        message: "Added successfully.",
+        result: collection_Category,
+      });
     });
   } catch (error) {
     console.error(error);

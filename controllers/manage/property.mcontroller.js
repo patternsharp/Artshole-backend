@@ -24,13 +24,11 @@ exports.AddArtworkProperty = async (req, res) => {
           .status(500)
           .send({ status: false, message: "Internal server error" });
       }
-      return res
-        .status(200)
-        .send({
-          status: true,
-          message: "Added successfully.",
-          result: art_Property,
-        });
+      return res.status(200).send({
+        status: true,
+        message: "Added successfully.",
+        result: art_Property,
+      });
     });
   } catch (error) {
     console.error(error);
@@ -77,7 +75,7 @@ exports.UpdateArtworkProperty = async (req, res) => {
         }
         return res
           .status(200)
-          .send({ status: true, message: "Updated successfully."});
+          .send({ status: true, message: "Updated successfully." });
       },
     );
   } catch (error) {

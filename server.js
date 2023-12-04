@@ -43,13 +43,12 @@ function test() {
     });
 
     // Process or output the nodes as needed
-    nodes.forEach(async(node, index) => {
+    nodes.forEach(async (node, index) => {
       // let artist_Category = new ArtworkCategory({
       //   itemTitle: node,
       // });
       // await artist_Category.save();
     });
-
   });
 }
 
@@ -57,13 +56,11 @@ test();
 app.use(express.json());
 connectDB();
 
-
-
 require("./routes/artshole.routes")(app);
 
 const PORT = process.env.PORT || 5000;
 const server = app.listen(PORT, () =>
-  console.log(`Server started on port ${PORT}`)
+  console.log(`Server started on port ${PORT}`),
 );
 
 const io = require("socket.io")(server, {
@@ -103,7 +100,7 @@ io.on("connection", (socket) => {
         notificationContent,
         type,
       });
-    }
+    },
   );
 
   socket.on("sendMessage", ({ senderId, receiverId, chatId, content }) => {
