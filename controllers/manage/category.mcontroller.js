@@ -261,7 +261,6 @@ exports.AddArtworkCategory = async (req, res) => {
 exports.GetArtworkCategory = async (req, res) => {
   try {
     let art_Category_List = await ArtworkCategory.find();
-    console.log('art_Category_List', art_Category_List);
     res.status(200).send(art_Category_List);
   } catch (error) {
     console.error(error);

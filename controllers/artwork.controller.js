@@ -20,9 +20,8 @@ exports.AddArtwork = async (req, res) => {
       propertyList,
     } = req.body;
 
-    console.log("create artwork req.body=>", req.body);
-    console.log("create artwork req.files=>", req.files);
 
+    console.log('this is property list',JSON.parse(propertyList));
     let artArr = [];
 
     if (req.files) {
@@ -53,7 +52,7 @@ exports.AddArtwork = async (req, res) => {
       status: status,
       category: category,
       year: year,
-      propertyList: JSON.parse(propertyList),
+      propertyList:JSON.parse(propertyList),
       lastUpdatedAt: Date(),
     });
 
