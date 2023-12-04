@@ -1,14 +1,17 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    const url = process.env.Dev_Mode == "true" ? process.env.MONGO_URI_Dev : process.env.MONGO_URI;
+    const url =
+      process.env.Dev_Mode == "true"
+        ? process.env.MONGO_URI_Dev
+        : process.env.MONGO_URI;
     await mongoose.connect(url, {
       useNewUrlParser: true,
-      useUnifiedTopology: true
+      useUnifiedTopology: true,
     });
 
-    console.log('Connected MongoDB for Artshole');
+    console.log("Connected MongoDB for Artshole");
   } catch (err) {
     console.error("Connection error", err);
     // Exit process with failure

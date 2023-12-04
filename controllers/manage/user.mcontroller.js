@@ -14,12 +14,14 @@ exports.GetAllUsers = async (req, res) => {
       .populate("collections")
       .exec();
 
-    console.log("userList=>", userList)
+    console.log("userList=>", userList);
 
     return res.status(200).send(userList);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
 
@@ -30,33 +32,38 @@ exports.GetOneUser = async (req, res) => {
     res.status(200).send(oneUser);
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };
-
 
 // Function that delete User
 exports.DeleteUser = async (req, res) => {
   try {
     const { userId } = req.body;
-    console.log("delete userid=>", userId)
+    console.log("delete userid=>", userId);
     let user = await User.findOne({ _id: userId, isDeleted: false });
-    console.log("delete user=>", user)
+    console.log("delete user=>", user);
 
     if (!user) {
-      return res.status(400).send({ status: false, message: 'User has already been deleted.' });
+      return res
+        .status(400)
+        .send({ status: false, message: "User has already been deleted." });
     }
     const filter = { _id: userId };
     const update = { isDeleted: true };
     // let doc = await Character.findOneAndUpdate(filter, update);
     // doc = await Character.findOne(filter);
-    let doc = await User.findOneAndUpdate(filter, update, { new: true })
+    let doc = await User.findOneAndUpdate(filter, update, { new: true });
     return res.status(200).send({
       status: true,
-      message: "Has been successfully deleted."
+      message: "Has been successfully deleted.",
     });
   } catch (error) {
     console.error(error);
-    return res.status(500).send({ status: false, message: 'Internal server error' });
+    return res
+      .status(500)
+      .send({ status: false, message: "Internal server error" });
   }
 };

@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 let userSchema = new Schema({
   role: {
-    type: String,   // client or admin
+    type: String, // client or admin
     required: true,
+    default: "client",
   },
   fullName: {
     type: String,
@@ -16,9 +17,10 @@ let userSchema = new Schema({
   },
   email: {
     type: String,
-    required: true
+    required: true,
   },
-  showEmail: {           //show email on profile page
+  showEmail: {
+    //show email on profile page
     type: Boolean,
     default: false,
   },
@@ -36,74 +38,74 @@ let userSchema = new Schema({
   },
   avatarUrl: {
     type: String,
-    default: ''
+    default: "default.jpg",
   },
   coverImg: {
     type: String,
-    default: ''
+    default: "default.jpg",
   },
   clientJob: {
-    type: String
+    type: String,
   },
-  jobCategory: [{ type: Schema.Types.ObjectId, ref: 'JobCategory' }],
-  artistCategory: [{ type: Schema.Types.ObjectId, ref: 'ArtistCategory' }],
+  jobCategory: [{ type: Schema.Types.ObjectId, ref: "JobCategory" }],
+  artistCategory: [{ type: Schema.Types.ObjectId, ref: "ArtistCategory" }],
   country: {
-    type: String
+    type: String,
   },
   state: {
-    type: String
+    type: String,
   },
   city: {
-    type: String
+    type: String,
   },
   address: {
-    type: String
+    type: String,
   },
   zipCode: {
-    type: String
+    type: String,
   },
   phoneNumber: {
-    type: String
+    type: String,
   },
   birthday: {
-    type: Date
+    type: Date,
   },
   about: {
     type: String,
-    default: ''
+    default: "",
   },
   personalLink: {
     type: String,
-    default: ''
+    default: "",
   },
   facebookLink: {
-    type: String
+    type: String,
   },
   instagramLink: {
-    type: String
+    type: String,
   },
   linkedinLink: {
-    type: String
+    type: String,
   },
   twitterLink: {
-    type: String
+    type: String,
   },
-  following: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  followers: [{ type: Schema.Types.ObjectId, ref: 'User' }],
-  likes: [{ type: Schema.Types.ObjectId, ref: 'Artwork' }],
-  artworks: [{ type: Schema.Types.ObjectId, ref: 'Artwork' }],
-  reposted: [{ type: Schema.Types.ObjectId, ref: 'Artwork' }],
-  bought: [{ type: Schema.Types.ObjectId, ref: 'Artwork' }],
-  collections: [{ type: Schema.Types.ObjectId, ref: 'Collection' }],
-  videos: [{ type: Schema.Types.ObjectId, ref: 'Video' }],
-  viewed: [{ type: Schema.Types.ObjectId, ref: 'User' }],
+  following: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  followers: [{ type: Schema.Types.ObjectId, ref: "User" }],
+  likes: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
+  artworks: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
+  reposted: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
+  bought: [{ type: Schema.Types.ObjectId, ref: "Artwork" }],
+  collections: [{ type: Schema.Types.ObjectId, ref: "Collection" }],
+  videos: [{ type: Schema.Types.ObjectId, ref: "Video" }],
+  viewed: [{ type: Schema.Types.ObjectId, ref: "User" }],
   isReported: {
     type: Boolean,
-    default: false
+    default: false,
   },
   reportDesc: {
     type: String,
-    default: ''
+    default: "",
   },
   reportedAt: {
     type: Date,
@@ -120,30 +122,30 @@ let userSchema = new Schema({
     default: false,
   },
   isBlocked: {
-    type: Boolean,  // block or active
+    type: Boolean, // block or active
     default: false,
   },
   blockedAt: {
-    type: Date
+    type: Date,
   },
   isDeleted: {
     type: Boolean,
     default: false,
   },
   deletedAt: {
-    type: Date
+    type: Date,
   },
   emailVerifyToken: {
-    type: String
+    type: String,
   },
   emailVerifyExpiry: {
-    type: Date
+    type: Date,
   },
   resetPasswordToken: {
-    type: String
+    type: String,
   },
   resetPasswordExpiry: {
-    type: Date
+    type: Date,
   },
 });
 

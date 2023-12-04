@@ -1,0 +1,70 @@
+{
+    "_id" : ObjectId("656b371568d55835ec0f2860"),
+    "itemTitle" : "All",
+    "createdAt" : ISODate("2023-12-02T13:54:29.923+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.924+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2861"),
+    "itemTitle" : "Paintings",
+    "createdAt" : ISODate("2023-12-02T13:54:29.925+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.925+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2862"),
+    "itemTitle" : "Photography",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2863"),
+    "itemTitle" : "Drawings",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2864"),
+    "itemTitle" : "Mixed Media",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2865"),
+    "itemTitle" : "Sculpture",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2866"),
+    "itemTitle" : "Collage",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2867"),
+    "itemTitle" : "Printmaking",
+    "createdAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.926+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2868"),
+    "itemTitle" : "Digital",
+    "createdAt" : ISODate("2023-12-02T13:54:29.927+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.927+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656b371568d55835ec0f2869"),
+    "itemTitle" : "Installation",
+    "createdAt" : ISODate("2023-12-02T13:54:29.927+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.927+0000"),
+    "__v" : NumberInt(0)
+}
