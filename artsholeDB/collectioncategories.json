@@ -1,0 +1,70 @@
+{
+    "_id" : ObjectId("656bed6a09c52371bf30a55b"),
+    "itemTitle" : "Abstract",
+    "createdAt" : ISODate("2023-12-03T02:52:26.754+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:26.754+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed6f09c52371bf30a55f"),
+    "itemTitle" : "Classical Fine",
+    "createdAt" : ISODate("2023-12-03T02:52:31.935+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:31.935+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed7309c52371bf30a563"),
+    "itemTitle" : "Contemporary",
+    "createdAt" : ISODate("2023-12-03T02:52:35.945+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:35.945+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed7809c52371bf30a567"),
+    "itemTitle" : "Street",
+    "createdAt" : ISODate("2023-12-03T02:52:40.261+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:40.261+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed7b09c52371bf30a56b"),
+    "itemTitle" : "Photography",
+    "createdAt" : ISODate("2023-12-03T02:52:43.839+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:43.839+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed7f09c52371bf30a56f"),
+    "itemTitle" : "Pop",
+    "createdAt" : ISODate("2023-12-03T02:52:47.700+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:47.700+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed8209c52371bf30a573"),
+    "itemTitle" : "Landscape",
+    "createdAt" : ISODate("2023-12-03T02:52:50.793+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:50.793+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed8609c52371bf30a577"),
+    "itemTitle" : "Portraiture",
+    "createdAt" : ISODate("2023-12-03T02:52:54.463+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:54.463+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed8a09c52371bf30a57b"),
+    "itemTitle" : "Digital",
+    "createdAt" : ISODate("2023-12-03T02:52:58.325+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:52:58.325+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656bed8d09c52371bf30a57f"),
+    "itemTitle" : "Indigenous",
+    "createdAt" : ISODate("2023-12-03T02:53:01.480+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:53:01.480+0000"),
+    "__v" : NumberInt(0)
+}

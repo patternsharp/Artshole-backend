@@ -68,3 +68,9 @@
     "lastUpdatedAt" : ISODate("2023-12-02T13:54:29.927+0000"),
     "__v" : NumberInt(0)
 }
+{
+    "_id" : ObjectId("656cfd962723ae4c6f6c851d"),
+    "itemTitle" : "Other",
+    "createdAt" : ISODate("2023-12-03T22:14:07.344+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-03T22:14:09.376+0000")
+}

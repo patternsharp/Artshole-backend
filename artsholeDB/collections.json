@@ -1,0 +1,29 @@
+{
+    "_id" : ObjectId("656bee0009c52371bf30a598"),
+    "collectionTitle" : "dark skype",
+    "author" : ObjectId("656bb53a1bc597b4a611026d"),
+    "coverImg" : "upload_coverImg_9dfa6f2d-06b0-44a6-a99e-1770579c4222_1701572096751.jpg",
+    "description" : "Celebrating the non-representational artistic styles that focus on shapes, colors, forms, and textures.",
+    "type" : "Street",
+    "artworks" : [
+
+    ],
+    "favorited" : [
+
+    ],
+    "comments" : [
+
+    ],
+    "liked" : [
+
+    ],
+    "viewed" : [
+        ObjectId("656bb53a1bc597b4a611026d")
+    ],
+    "shared" : NumberInt(0),
+    "lastUpdatedAt" : ISODate("2023-12-03T02:55:03.000+0000"),
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "createdAt" : ISODate("2023-12-03T02:54:56.758+0000"),
+    "__v" : NumberInt(1)
+}
