@@ -1,0 +1,190 @@
+{
+    "_id" : ObjectId("656f0e48ddbc9ca2aab7044a"),
+    "role" : "admin",
+    "fullName" : "Kevin Murphy",
+    "screenName" : "kevin",
+    "email" : "kevin.murphy.contact@gmail.com",
+    "showEmail" : false,
+    "password" : "$2a$10$DzVLEQ4RE21kqlpJ1uCOFeEMRNRg9axa5C1jOHMV1UdsGMSoQ/ZCu",
+    "term" : true,
+    "subscribe" : true,
+    "avatarUrl" : "upload_avatarUrl_90236c49-3e23-4f59-b922-8296d3aeb7ac_1701777647951.jpg",
+    "coverImg" : "default.PNG",
+    "jobCategory" : [
+
+    ],
+    "artistCategory" : [
+
+    ],
+    "about" : "",
+    "personalLink" : "https://",
+    "following" : [
+        ObjectId("656f12e2ddbc9ca2aab7048d")
+    ],
+    "followers" : [
+        ObjectId("656f12e2ddbc9ca2aab7048d")
+    ],
+    "likes" : [
+
+    ],
+    "artworks" : [
+        ObjectId("656f15f6ddbc9ca2aab70506")
+    ],
+    "reposted" : [
+
+    ],
+    "bought" : [
+
+    ],
+    "collections" : [
+
+    ],
+    "videos" : [
+        ObjectId("656f193eddbc9ca2aab70616")
+    ],
+    "viewed" : [
+
+    ],
+    "isReported" : false,
+    "reportDesc" : "",
+    "isVerified" : true,
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "emailVerifyToken" : "3abfd876a5d31985e12811c23c12dc5aa3baf3439ff14ae3c6bd3ca2ab7545f3",
+    "emailVerifyExpiry" : ISODate("2023-12-05T12:04:28.915+0000"),
+    "registeredAt" : ISODate("2023-12-05T11:49:28.964+0000"),
+    "__v" : NumberInt(4),
+    "lastVisitedAt" : ISODate("2023-12-05T13:06:22.000+0000"),
+    "address" : "",
+    "birthday" : null,
+    "city" : "",
+    "clientJob" : "",
+    "country" : "Canada",
+    "phoneNumber" : "",
+    "state" : "",
+    "zipCode" : ""
+}
+{
+    "_id" : ObjectId("656f12e2ddbc9ca2aab7048d"),
+    "role" : "admin",
+    "fullName" : "Tony T",
+    "screenName" : "TonyT",
+    "email" : "tony@tonysgallery.com",
+    "showEmail" : false,
+    "password" : "$2a$10$rDPTchHINyVjZds4.QCpkOIl0UUBQs7WmDnkaQsUy/Yj8fPXGHJEi",
+    "term" : true,
+    "subscribe" : false,
+    "avatarUrl" : "upload_avatarUrl_bf33de1c-319c-4a0e-b457-d354f2880da5_1701778744496.jpg",
+    "coverImg" : "upload_coverImg_60e123b0-1fa6-4c8e-a4cf-8c19e00d7f19_1701778748534.jpg",
+    "jobCategory" : [
+
+    ],
+    "artistCategory" : [
+
+    ],
+    "about" : "",
+    "personalLink" : "https://",
+    "following" : [
+        ObjectId("656f0e48ddbc9ca2aab7044a")
+    ],
+    "followers" : [
+        ObjectId("656f0e48ddbc9ca2aab7044a")
+    ],
+    "likes" : [
+
+    ],
+    "artworks" : [
+        ObjectId("656f165addbc9ca2aab70547")
+    ],
+    "reposted" : [
+
+    ],
+    "bought" : [
+
+    ],
+    "collections" : [
+
+    ],
+    "videos" : [
+
+    ],
+    "viewed" : [
+
+    ],
+    "isReported" : false,
+    "reportDesc" : "",
+    "isVerified" : true,
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "emailVerifyToken" : "b757601d584a4f6c45c288873c6c1511ca72e4548b4502160e234a4e50568b6e",
+    "emailVerifyExpiry" : ISODate("2023-12-05T12:24:06.518+0000"),
+    "registeredAt" : ISODate("2023-12-05T12:09:06.519+0000"),
+    "__v" : NumberInt(3),
+    "lastVisitedAt" : ISODate("2023-12-05T12:19:44.000+0000"),
+    "address" : "",
+    "birthday" : null,
+    "city" : "",
+    "clientJob" : "",
+    "country" : "",
+    "phoneNumber" : "",
+    "state" : "",
+    "zipCode" : ""
+}
+{
+    "_id" : ObjectId("656f12fbddbc9ca2aab70494"),
+    "role" : "client",
+    "fullName" : "yuri",
+    "screenName" : "Yuri",
+    "email" : "yuri@gmail.com",
+    "showEmail" : false,
+    "password" : "$2a$10$Eqd2Y0mLtRMB08WsHIwACey4HNsKJstr/DlEs4kA8VI.VXZgwI/kq",
+    "term" : true,
+    "subscribe" : false,
+    "avatarUrl" : "default.jpg",
+    "coverImg" : "default.PNG",
+    "jobCategory" : [
+
+    ],
+    "artistCategory" : [
+
+    ],
+    "about" : "",
+    "personalLink" : "",
+    "following" : [
+
+    ],
+    "followers" : [
+
+    ],
+    "likes" : [
+
+    ],
+    "artworks" : [
+
+    ],
+    "reposted" : [
+
+    ],
+    "bought" : [
+
+    ],
+    "collections" : [
+
+    ],
+    "videos" : [
+
+    ],
+    "viewed" : [
+
+    ],
+    "isReported" : false,
+    "reportDesc" : "",
+    "isVerified" : true,
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "emailVerifyToken" : "9d696da7f37207cf95cddee61a1f0a2a95cb1dab50e5a8003c2caebe03edc920",
+    "emailVerifyExpiry" : ISODate("2023-12-05T12:24:31.980+0000"),
+    "registeredAt" : ISODate("2023-12-05T12:09:31.981+0000"),
+    "__v" : NumberInt(0),
+    "lastVisitedAt" : ISODate("2023-12-05T12:26:32.000+0000")
+}

@@ -1,0 +1,77 @@
+{
+    "_id" : ObjectId("656f15f6ddbc9ca2aab70506"),
+    "artworkTitle" : "Landscape",
+    "author" : ObjectId("656f0e48ddbc9ca2aab7044a"),
+    "artworkImg" : [
+        "upload_artworkImg_b4bfeac3-c9dd-4a3d-b47c-aca9ff00a575_1701778933725.jpg",
+        "upload_artworkImg_20543488-a12e-47c5-8179-3c81b99394e8_1701778934426.jpg"
+    ],
+    "description" : "Expansive Sky: A vast azure canvas dotted with wispy clouds, casting an ever-changing light over the scene below.\r\nRugged Mountains: Towering giants cloaked in shades of emerald and granite, with summits that gleam under the sun's golden touch.",
+    "price" : null,
+    "category" : "Photography",
+    "propertyList" : [
+        ObjectId("656bb04324ff8b2eaa0c98a7"),
+        ObjectId("656bb04124ff8b2eaa0c98a1"),
+        ObjectId("656bb04224ff8b2eaa0c98a2"),
+        ObjectId("656bb0ec24ff8b2eaa0c98ea"),
+        ObjectId("656bb0ed24ff8b2eaa0c98ec"),
+        ObjectId("656bb0ee24ff8b2eaa0c98ef")
+    ],
+    "year" : "",
+    "width" : null,
+    "height" : null,
+    "depth" : null,
+    "status" : true,
+    "comments" : [
+
+    ],
+    "liked" : [
+
+    ],
+    "viewed" : [
+
+    ],
+    "shared" : NumberInt(0),
+    "lastUpdatedAt" : ISODate("2023-12-05T12:22:14.000+0000"),
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "createdAt" : ISODate("2023-12-05T12:22:14.659+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656f165addbc9ca2aab70547"),
+    "artworkTitle" : "Forest of Dreams ",
+    "author" : ObjectId("656f12e2ddbc9ca2aab7048d"),
+    "artworkImg" : [
+        "upload_artworkImg_da28302a-e937-4a8c-ba3d-2fdddc9391ba_1701779034230.jpg"
+    ],
+    "description" : "I endeavored to capture the essence of transformation and the fluidity of nature's elements. This piece is an exploration of the earth's perpetual motion, the dance of light on water, and the symbiotic relationship between land and sky.\r\nI chose a palette that resonates with the vibrancy of the natural world: the greens are reminiscent of foliage in motion, the wind’s breath made visible on canvas. These greens flow and twist, suggesting growth and vitality, while also hinting at the powerful currents beneath the ocean's surface.\r\n\r\nThe central motif, where warm pinks and reds converge with a burst of yellow, is my interpretation of a day's transition, a moment when the sun kisses the horizon. It's a time of reflection, of day meeting night, a pause in the tempo of diurnal rhythm. The sky and water merge in a reflective dance, blurring the lines between reality and reflection.\r\n\r\nTo the right, the bold browns and deep oranges form a grounding presence, a cliffside or perhaps a towering tree trunk, standing as a testament to the enduring strength of the earth. Its texture is deliberate, a contrast to the smoothness of the elements, providing a tactile anchor to the viewer.\r\n\r\nIn the foreground, the subdued browns and grays suggest a foundation, a base from which the rest of the scene emerges. It's the earth in its many layers, from the fertile soil to the rocky substrates, all coalescing into a single plane.\r\n\r\nThis painting, in its entirety, is a conversation with nature, an abstract representation of its never-ending cycle, its beauty, and its dynamism. It's an invitation to the viewer to feel the energy of the natural world, to see its colors blend and whirl in a symphony of life.",
+    "price" : NumberInt(1000),
+    "category" : "All",
+    "propertyList" : [
+        ObjectId("656bb04124ff8b2eaa0c98a1"),
+        ObjectId("656bb0ec24ff8b2eaa0c98e9"),
+        ObjectId("656bb0ee24ff8b2eaa0c98ee"),
+        ObjectId("656bb04324ff8b2eaa0c98a6")
+    ],
+    "year" : "",
+    "width" : NumberInt(120),
+    "height" : NumberInt(100),
+    "depth" : NumberInt(6),
+    "status" : true,
+    "comments" : [
+
+    ],
+    "liked" : [
+
+    ],
+    "viewed" : [
+
+    ],
+    "shared" : NumberInt(0),
+    "lastUpdatedAt" : ISODate("2023-12-05T12:23:54.000+0000"),
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "createdAt" : ISODate("2023-12-05T12:23:54.698+0000"),
+    "__v" : NumberInt(0)
+}

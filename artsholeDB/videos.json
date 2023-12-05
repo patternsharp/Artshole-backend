@@ -1,0 +1,24 @@
+{
+    "_id" : ObjectId("656f193eddbc9ca2aab70616"),
+    "videoLink" : "https://www.youtube.com/watch?v=EngW7tLk6R8",
+    "author" : ObjectId("656f0e48ddbc9ca2aab7044a"),
+    "description" : "Cartoon",
+    "favorited" : [
+
+    ],
+    "comments" : [
+
+    ],
+    "liked" : [
+
+    ],
+    "viewed" : [
+
+    ],
+    "shared" : NumberInt(0),
+    "lastUpdatedAt" : ISODate("2023-12-05T12:36:14.000+0000"),
+    "isBlocked" : false,
+    "isDeleted" : false,
+    "createdAt" : ISODate("2023-12-05T12:36:14.934+0000"),
+    "__v" : NumberInt(0)
+}

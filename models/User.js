@@ -42,7 +42,7 @@ let userSchema = new Schema({
   },
   coverImg: {
     type: String,
-    default: "default.jpg",
+    default: "default.PNG",
   },
   clientJob: {
     type: String,
