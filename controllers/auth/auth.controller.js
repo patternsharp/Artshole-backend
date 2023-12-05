@@ -58,7 +58,7 @@ exports.Welcome = async (req, res) => {
     if (!user) {
       return res
         .status(401)
-        .send({ status: false, message: "Invalid authorization token" });
+        .send({ status: false, message: "Invalid authorization token." });
     }
 
     const filter = { _id: data.userId };
@@ -70,7 +70,7 @@ exports.Welcome = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -84,19 +84,19 @@ exports.SignIn = async (req, res) => {
     if (!user) {
       return res
         .status(400)
-        .send({ status: false, code: 1, message: "User doesn't exist" });
+        .send({ status: false, code: 1, message: "User doesn't exist." });
     }
 
     if (user.isBlocked == true) {
       return res
         .status(400)
-        .send({ status: false, code: 2, message: "Blocked" });
+        .send({ status: false, code: 2, message: "User was blocked." });
     }
 
     if (user.isVerified == false) {
       return res
         .status(400)
-        .send({ status: false, code: 3, message: "Not Verified" });
+        .send({ status: false, code: 3, message: "User not verified." });
     }
 
     const isValid = await bcrypt.compare(password, user.password);
@@ -130,7 +130,7 @@ exports.SignIn = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -149,20 +149,20 @@ exports.SignInWithGoogle = async (req, res) => {
     if (!user) {
       return res
         .status(200)
-        .send({ status: false, code: 1, message: "User doesn't exist" });
+        .send({ status: false, code: 1, message: "User doesn't exist." });
     }
 
     if (user.isBlocked == true) {
       return res
         .status(200)
-        .send({ status: false, code: 2, message: "Blocked" });
+        .send({ status: false, code: 2, message: "User was blocked." });
     }
 
     if (user.isVerified == false) {
       return res.status(200).send({
         status: false,
         code: 3,
-        message: "Not Verified",
+        message: "User not Verified",
         email: payload.email,
       });
     }
@@ -188,7 +188,7 @@ exports.SignInWithGoogle = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -205,13 +205,13 @@ exports.SignUp = async (req, res) => {
       if (user.screenName === screenName) {
         return res
           .status(400)
-          .send({ status: false, message: "ScreenName already exists" });
+          .send({ status: false, message: "ScreenName already exists." });
       } else if (user.email === email) {
         return res
           .status(400)
-          .send({ status: false, message: "Email already exists" });
+          .send({ status: false, message: "Email already exists." });
       } else if (user.isBlocked == true) {
-        return res.status(400).send({ status: false, message: "Blocked" });
+        return res.status(400).send({ status: false, message: "User was blocked." });
       }
     }
 
@@ -258,7 +258,7 @@ exports.SignUp = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -279,9 +279,9 @@ exports.SignUpWithGoogle = async (req, res) => {
       if (userExists.email === payload.email) {
         return res
           .status(400)
-          .send({ status: false, message: "Email already exists" });
+          .send({ status: false, message: "Email already exists." });
       } else if (userExists.isBlocked == true) {
-        return res.status(400).send({ status: false, message: "Blocked" });
+        return res.status(400).send({ status: false, message: "User was blocked" });
       }
     }
 
@@ -322,7 +322,7 @@ exports.SignUpWithGoogle = async (req, res) => {
 
     return res.status(200).send({
       status: true,
-      message: "Register Successfully.",
+      message: "Register successfully.",
       email: payload.email,
     });
   } catch (error) {
@@ -366,7 +366,7 @@ exports.UpdateProfile = async (req, res) => {
     if (userExists && userExists._id.toString() !== _id.toString()) {
       return res
         .status(404)
-        .send({ status: false, message: "User Already Exists" });
+        .send({ status: false, message: "User already Exists." });
     }
 
     if (userExists.avatarUrl !== "" && req.files?.avatarUrl) {
@@ -409,12 +409,12 @@ exports.UpdateProfile = async (req, res) => {
 
     return res
       .status(200)
-      .send({ status: true, message: "Update Successfully." });
+      .send({ status: true, message: "Update successfully." });
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -435,12 +435,12 @@ exports.UpdateSocial = async (req, res) => {
     let doc = await User.findOneAndUpdate(filter, update, { new: true });
     return res
       .status(200)
-      .send({ status: true, message: "Update Successfully." });
+      .send({ status: true, message: "Update successfully." });
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -474,7 +474,7 @@ exports.UpdatePassword = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -494,7 +494,7 @@ exports.UserVerification = async (req, res) => {
     if (!user) {
       return res.status(200).send({
         status: false,
-        message: "User not found or Expired email verification link",
+        message: "User not found or Expired email verification link.",
       });
     }
 
@@ -544,7 +544,7 @@ exports.UserVerification = async (req, res) => {
 
     return res.status(200).send({
       status: true,
-      message: "Email Verified",
+      message: "Email verified",
       user: user,
       accessToken: accessToken,
     });
@@ -552,7 +552,7 @@ exports.UserVerification = async (req, res) => {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -569,7 +569,7 @@ exports.ResendVerification = async (req, res) => {
     });
 
     if (!user) {
-      return res.status(200).send({ status: false, message: "User not found" });
+      return res.status(200).send({ status: false, message: "User not found." });
     }
 
     const verifyToken = crypto.randomBytes(20).toString("hex");
@@ -599,12 +599,12 @@ exports.ResendVerification = async (req, res) => {
 
     return res
       .status(200)
-      .send({ status: true, message: "Success resend link" });
+      .send({ status: true, message: "Success resend link." });
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -618,7 +618,7 @@ exports.ForgotPassword = async (req, res) => {
       isVerified: true,
     });
     if (!user) {
-      return res.status(200).send({ status: false, message: "User Not Found" });
+      return res.status(200).send({ status: false, message: "User Not Found." });
     }
 
     const resetToken = crypto.randomBytes(20).toString("hex");
@@ -650,19 +650,19 @@ exports.ForgotPassword = async (req, res) => {
 
       return res.status(200).json({
         status: true,
-        message: `We've sent a reset password link to: ${user.email}`,
+        message: `We've sent a reset password link to: ${user.email}.`,
       });
     } catch (error) {
       console.error(error);
       return res
         .status(500)
-        .send({ status: false, message: "Internal server error" });
+        .send({ status: false, message: "Internal server error." });
     }
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -680,7 +680,7 @@ exports.ResetPassword = async (req, res) => {
     });
 
     if (!user) {
-      return res.status(200).send({ status: false, message: "User Not Found" });
+      return res.status(200).send({ status: false, message: "User not found." });
     }
 
     const filter = { _id: user._id };
@@ -698,12 +698,12 @@ exports.ResetPassword = async (req, res) => {
     await User.findOneAndUpdate(filter, update, { new: true });
     return res
       .status(200)
-      .send({ status: true, message: "Update Successfully." });
+      .send({ status: true, message: "Update successfully." });
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };
 
@@ -739,11 +739,11 @@ exports.DeleteAccount = async (req, res) => {
 
     return res
       .status(200)
-      .send({ status: true, message: "Delete Successfully." });
+      .send({ status: true, message: "Delete successfully." });
   } catch (error) {
     console.error(error);
     return res
       .status(500)
-      .send({ status: false, message: "Internal server error" });
+      .send({ status: false, message: "Internal server error." });
   }
 };

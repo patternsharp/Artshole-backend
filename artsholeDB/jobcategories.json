@@ -1,0 +1,28 @@
+{
+    "_id" : ObjectId("656e2e0cb22fe54752ebec7e"),
+    "name" : "Artist",
+    "createdAt" : ISODate("2023-12-04T19:52:44.391+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-04T19:52:44.391+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656e2e10b22fe54752ebec82"),
+    "name" : "Painters",
+    "createdAt" : ISODate("2023-12-04T19:52:48.895+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-04T19:52:48.895+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656e2e1db22fe54752ebec86"),
+    "name" : "Sculptors",
+    "createdAt" : ISODate("2023-12-04T19:53:01.255+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-04T19:53:01.255+0000"),
+    "__v" : NumberInt(0)
+}
+{
+    "_id" : ObjectId("656f0756fe8792b5246187c4"),
+    "name" : "Musicians",
+    "createdAt" : ISODate("2023-12-05T11:19:50.325+0000"),
+    "lastUpdatedAt" : ISODate("2023-12-05T11:19:50.325+0000"),
+    "__v" : NumberInt(0)
+}
