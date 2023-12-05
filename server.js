@@ -1,19 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const path = require("path");
 const connectDB = require("./config/dbConn");
 const app = express();
 const fs = require("fs");
-
-// -------------------------------------models for dumpdb
-const ArtistCategory = require("./models/ArtistCategory");
-const Artwork = require("./models/Artwork");
-const ArtworkCategory = require("./models/ArtworkCategory");
-const ArtworkProperty = require("./models/ArtworkProperty");
-const JobCategory = require("./models/JobCategory");
-const CollectionCategory = require("./models/CollectionCategory");
-const Collection = require("./models/Collection");
 
 require("dotenv").config();
 
@@ -21,38 +11,7 @@ app.use(cors({ origin: "*" }));
 app.use(express.static("./uploads"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-function test() {
-  const nodes = [];
 
-  // Read the contents of the text file
-  fs.readFile("art_category.txt", "utf8", (err, data) => {
-    if (err) {
-      console.error("Error reading the file:", err);
-      return;
-    }
-
-    // Split the content by newlines to get items
-    const lines = data.split(/\r?\n/);
-
-    // Add each non-empty line as a node to the array
-    lines.forEach((line) => {
-      if (line.trim()) {
-        // This will ignore empty lines
-        nodes.push(line.trim());
-      }
-    });
-
-    // Process or output the nodes as needed
-    nodes.forEach(async (node, index) => {
-      // let artist_Category = new ArtworkCategory({
-      //   itemTitle: node,
-      // });
-      // await artist_Category.save();
-    });
-  });
-}
-
-test();
 app.use(express.json());
 connectDB();
 

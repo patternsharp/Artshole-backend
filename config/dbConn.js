@@ -14,7 +14,6 @@ const connectDB = async () => {
     console.log("Connected MongoDB for Artshole");
   } catch (err) {
     console.error("Connection error", err);
-    // Exit process with failure
     process.exit(1);
   }
 };

@@ -6,9 +6,6 @@ const Collection = require("../models/Collection");
 exports.AddComment = async (req, res) => {
   try {
     const { artworkId, collectionId, pCommentId, author, message } = req.body;
-
-    console.log(req.body);
-
     let one_comment = new Comment({
       artworkId: artworkId,
       collectionId: collectionId,

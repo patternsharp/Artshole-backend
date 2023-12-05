@@ -133,13 +133,15 @@ module.exports = function (app) {
     "/api/manage/category/get-artist-category",
     categoryManageController.GetArtistCategory,
   );
-  app.post(
-    "/api/manage/category/update-artist-category",
-    categoryManageController.UpdateArtistCategory,
-  );
+
   app.post(
     "/api/manage/category/delete-artist-category",
     categoryManageController.DeleteArtistCategory,
+  );
+
+  app.post(
+    "/api/manage/category/update-artist-category",
+    categoryManageController.UpdateArtistCategory,
   );
 
   app.post(

@@ -1,69 +1,69 @@
 {
     "_id" : ObjectId("656bc53d25dce14f4b01e5ef"),
-    "itemTitle" : "All",
+    "name" : "All",
     "createdAt" : ISODate("2023-12-02T14:07:32.769+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.769+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac16"),
-    "itemTitle" : "Paintings",
+    "name" : "Paintings",
     "createdAt" : ISODate("2023-12-02T14:07:32.769+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.769+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac17"),
-    "itemTitle" : "Photography",
+    "name" : "Photography",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac18"),
-    "itemTitle" : "Drawings",
+    "name" : "Drawings",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac19"),
-    "itemTitle" : "Mixed Media",
+    "name" : "Mixed Media",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac1a"),
-    "itemTitle" : "Sculpture",
+    "name" : "Sculpture",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac1b"),
-    "itemTitle" : "Collage",
+    "name" : "Collage",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac1c"),
-    "itemTitle" : "Printmaking",
+    "name" : "Printmaking",
     "createdAt" : ISODate("2023-12-02T14:07:32.770+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.771+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac1d"),
-    "itemTitle" : "Digital",
+    "name" : "Digital",
     "createdAt" : ISODate("2023-12-02T14:07:32.771+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.771+0000"),
     "__v" : NumberInt(0)
 }
 {
     "_id" : ObjectId("656b3a24af08abc12310ac1e"),
-    "itemTitle" : "Installation",
+    "name" : "Installation",
     "createdAt" : ISODate("2023-12-02T14:07:32.771+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T14:07:32.771+0000"),
     "__v" : NumberInt(0)

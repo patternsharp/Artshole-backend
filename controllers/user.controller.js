@@ -31,8 +31,6 @@ exports.GetAllArtists = async (req, res) => {
       .populate("viewed")
       .exec();
 
-    console.log("userList=>", userList);
-
     return res.status(200).send(userList);
   } catch (err) {
     console.error(err.message);

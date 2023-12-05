@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 let artworkCategorySchema = new Schema({
-  itemTitle: {
+  name: {
     type: String,
     required: true,
   },

@@ -78,7 +78,6 @@ exports.ReadNotifications = async (req, res) => {
 exports.DeleteNotifications = async (req, res) => {
   try {
     const { itemIds } = req.body;
-    console.log("itemIds=>", itemIds);
     itemIds.map(async (e) => {
       let oneItem = await Notification.findOne({ _id: e });
       if (!oneItem) {

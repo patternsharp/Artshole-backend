@@ -14,8 +14,6 @@ exports.GetAllUsers = async (req, res) => {
       .populate("collections")
       .exec();
 
-    console.log("userList=>", userList);
-
     return res.status(200).send(userList);
   } catch (error) {
     console.error(error);
@@ -42,9 +40,7 @@ exports.GetOneUser = async (req, res) => {
 exports.DeleteUser = async (req, res) => {
   try {
     const { userId } = req.body;
-    console.log("delete userid=>", userId);
     let user = await User.findOne({ _id: userId, isDeleted: false });
-    console.log("delete user=>", user);
 
     if (!user) {
       return res

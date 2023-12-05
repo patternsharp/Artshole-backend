@@ -48,9 +48,6 @@ exports.AddCollection = async (req, res) => {
 exports.UpdateCollection = async (req, res) => {
   try {
     const { _id, collectionTitle, coverImg, description, type } = req.body;
-
-    console.log(req.body);
-
     let collection = await Collection.findOne({ _id: _id });
 
     if (!collection) {

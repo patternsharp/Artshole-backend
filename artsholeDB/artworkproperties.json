@@ -1,6 +1,6 @@
 {
     "_id" : ObjectId("656baea39371a18d001aa2a5"),
-    "itemTitle" : "STYLE",
+    "name" : "STYLE",
     "parentId" : "0",
     "createdAt" : ISODate("2023-12-02T22:24:35.974+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T22:24:35.974+0000"),
@@ -8,7 +8,7 @@
 }
 {
     "_id" : ObjectId("656baeb49371a18d001aa2ab"),
-    "itemTitle" : "SUBJECT",
+    "name" : "SUBJECT",
     "createdAt" : ISODate("2023-12-02T22:24:52.093+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T22:24:52.093+0000"),
     "__v" : NumberInt(0),
@@ -16,7 +16,7 @@
 }
 {
     "_id" : ObjectId("656baed09371a18d001aa2b5"),
-    "itemTitle" : "MEDIUM",
+    "name" : "MEDIUM",
     "parentId" : "0",
     "createdAt" : ISODate("2023-12-02T22:25:20.365+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T22:25:20.365+0000"),
@@ -24,7 +24,7 @@
 }
 {
     "_id" : ObjectId("656baed89371a18d001aa2b8"),
-    "itemTitle" : "MATERIAL",
+    "name" : "MATERIAL",
     "parentId" : "0",
     "createdAt" : ISODate("2023-12-02T22:25:28.676+0000"),
     "lastUpdatedAt" : ISODate("2023-12-02T22:25:28.676+0000"),
@@ -32,112 +32,112 @@
 }
 {
     "_id" : ObjectId("656bb04024ff8b2eaa0c98a0"),
-    "itemTitle" : "Abstract",
+    "name" : "Abstract",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04124ff8b2eaa0c98a1"),
-    "itemTitle" : "Abstract Expressionism",
+    "name" : "Abstract Expressionism",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04224ff8b2eaa0c98a2"),
-    "itemTitle" : "Modern",
+    "name" : "Modern",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04224ff8b2eaa0c98a3"),
-    "itemTitle" : "Fine Art",
+    "name" : "Fine Art",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04224ff8b2eaa0c98a4"),
-    "itemTitle" : "Expressionism",
+    "name" : "Expressionism",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04324ff8b2eaa0c98a5"),
-    "itemTitle" : "Minimalism",
+    "name" : "Minimalism",
     "parentId" : "656baea39371a18d001aa2a5"
 }
 {
     "_id" : ObjectId("656bb04324ff8b2eaa0c98a6"),
-    "itemTitle" : "Abstract",
+    "name" : "Abstract",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb04324ff8b2eaa0c98a7"),
-    "itemTitle" : "Landscape",
+    "name" : "Landscape",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb04324ff8b2eaa0c98a8"),
-    "itemTitle" : "Nature",
+    "name" : "Nature",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb04324ff8b2eaa0c98a9"),
-    "itemTitle" : "Floral",
+    "name" : "Floral",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb04424ff8b2eaa0c98aa"),
-    "itemTitle" : "Geometric",
+    "name" : "Geometric",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb0ca24ff8b2eaa0c98d5"),
-    "itemTitle" : "Portrait",
+    "name" : "Portrait",
     "parentId" : "656baeb49371a18d001aa2ab"
 }
 {
     "_id" : ObjectId("656bb0ec24ff8b2eaa0c98e9"),
-    "itemTitle" : "Acrylic",
+    "name" : "Acrylic",
     "parentId" : "656baed09371a18d001aa2b5"
 }
 {
     "_id" : ObjectId("656bb0ec24ff8b2eaa0c98ea"),
-    "itemTitle" : "Watercolor",
+    "name" : "Watercolor",
     "parentId" : "656baed09371a18d001aa2b5"
 }
 {
     "_id" : ObjectId("656bb0ed24ff8b2eaa0c98eb"),
-    "itemTitle" : "Gesso",
+    "name" : "Gesso",
     "parentId" : "656baed09371a18d001aa2b5"
 }
 {
     "_id" : ObjectId("656bb0ed24ff8b2eaa0c98ec"),
-    "itemTitle" : "Spray Paint",
+    "name" : "Spray Paint",
     "parentId" : "656baed09371a18d001aa2b5"
 }
 {
     "_id" : ObjectId("656bb0ed24ff8b2eaa0c98ed"),
-    "itemTitle" : "Paper",
+    "name" : "Paper",
     "parentId" : "656baed09371a18d001aa2b5"
 }
 {
     "_id" : ObjectId("656bb0ee24ff8b2eaa0c98ee"),
-    "itemTitle" : "Canvas",
+    "name" : "Canvas",
     "parentId" : "656baed89371a18d001aa2b8"
 }
 {
     "_id" : ObjectId("656bb0ee24ff8b2eaa0c98ef"),
-    "itemTitle" : "Paper",
+    "name" : "Paper",
     "parentId" : "656baed89371a18d001aa2b8"
 }
 {
     "_id" : ObjectId("656bb0ef24ff8b2eaa0c98f0"),
-    "itemTitle" : "Cardbpard",
+    "name" : "Cardbpard",
     "parentId" : "656baed89371a18d001aa2b8"
 }
 {
     "_id" : ObjectId("656bb0ef24ff8b2eaa0c98f1"),
-    "itemTitle" : "Soft(Yarn, Cotton, Fabric)",
+    "name" : "Soft(Yarn, Cotton, Fabric)",
     "parentId" : "656baed89371a18d001aa2b8"
 }
 {
     "_id" : ObjectId("656d309c22df3258b68535e3"),
-    "itemTitle" : "12313",
+    "name" : "12313",
     "parentId" : "656d308c22df3258b68535dd",
     "createdAt" : ISODate("2023-12-04T01:51:24.877+0000"),
     "lastUpdatedAt" : ISODate("2023-12-04T01:51:24.877+0000"),

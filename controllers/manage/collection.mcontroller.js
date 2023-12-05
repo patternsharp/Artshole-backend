@@ -121,7 +121,6 @@ exports.GetAllCollections = async (req, res) => {
         },
       },
     ]);
-    console.log("collection_list=>", collection_List);
     res.status(200).send(collection_List);
   } catch (err) {
     console.error(err.message);

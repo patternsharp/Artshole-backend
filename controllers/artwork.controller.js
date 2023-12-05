@@ -20,7 +20,6 @@ exports.AddArtwork = async (req, res) => {
       propertyList,
     } = req.body;
 
-    console.log("this is property list", JSON.parse(propertyList));
     let artArr = [];
 
     if (req.files) {
@@ -105,9 +104,6 @@ exports.UpdateArtwork = async (req, res) => {
       propertyList,
     } = req.body;
 
-    console.log("Update artwork req.body=>", req.body);
-    console.log("Update artwork req.files=>", req.files);
-
     let art = await Artwork.findOne({
       _id: _id,
       isDeleted: false,
@@ -119,8 +115,6 @@ exports.UpdateArtwork = async (req, res) => {
         .status(400)
         .send({ status: false, message: "Something went wrong!" });
     }
-
-    console.log(req.files.length);
 
     if (art && req.files.length > 0) {
       for (let i = 0; i < art.artworkImg.length; i++) {
@@ -135,8 +129,6 @@ exports.UpdateArtwork = async (req, res) => {
     } else {
       artArr = artworkImg;
     }
-
-    console.log("artArr=>", artArr);
 
     const filter = { _id: _id };
     const update = {
@@ -404,8 +396,6 @@ exports.GetInitialArtworksByUser = async (req, res) => {
         }
       }
     }
-
-    console.log(query);
 
     let art_List = await Artwork.find(query)
       .populate({

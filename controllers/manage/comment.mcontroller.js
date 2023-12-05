@@ -6,8 +6,6 @@ exports.AddComment = async (req, res) => {
   const { type, artworkId, collectionId, pCommentId, userId, content } =
     req.body;
 
-  console.log(req.body);
-
   try {
     let one_comment = new Comment({
       type: type,
@@ -45,7 +43,6 @@ exports.GetComments = async (req, res) => {
       _id: { $in: ids },
       isDeleted: false,
     });
-    console.log(comment_List);
     res.status(200).send(comment_List);
   } catch (err) {
     console.error(err.message);
@@ -83,7 +80,6 @@ exports.GetComments = async (req, res) => {
 
 // // Function that Delete Artwork Category items
 // exports.DeleteArtworkCategory = async (req, res) => {
-//   console.log("delete item=>", req.body.itemId)
 //   try {
 //     if (req.body && req.body.itemId) {
 //       const response = await Comment.deleteOne({ _id: req.body.itemId });

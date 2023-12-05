@@ -6,8 +6,6 @@ exports.GetAllVisitors = async (req, res) => {
   try {
     let art_List = await Artwork.find({ isDeleted: false, isBlocked: false });
 
-    console.log(1);
-
     return res.status(200).send(art_List);
   } catch (error) {
     console.error(error.message);

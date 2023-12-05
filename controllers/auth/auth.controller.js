@@ -81,8 +81,6 @@ exports.SignIn = async (req, res) => {
     let user = await User.findOne({ email: email, isDeleted: false })
       .populate("jobCategory")
       .exec();
-
-    console.log("user data", user);
     if (!user) {
       return res
         .status(400)
@@ -144,9 +142,6 @@ exports.SignInWithGoogle = async (req, res) => {
     const verificationResponse = await verifyGoogleToken(tokens?.id_token);
     const payload = verificationResponse.payload;
     const password = payload.sub;
-
-    console.log("payload=>>", payload);
-
     let user = await User.findOne({ email: payload.email, isDeleted: false })
       .populate("jobCategory")
       .exec();
@@ -490,10 +485,6 @@ exports.UserVerification = async (req, res) => {
       .createHash("sha256")
       .update(req.params.token)
       .digest("hex");
-    console.log("req.params.token=>", req.params.token);
-    console.log("emailVerifyToken=>", emailVerifyToken);
-
-    // const emailVerifyUrl = `${web_host_url}/signup/email-verify/${verifyToken}`;
 
     let user = await User.findOne({
       emailVerifyToken,
@@ -677,7 +668,6 @@ exports.ForgotPassword = async (req, res) => {
 
 //Reset Password
 exports.ResetPassword = async (req, res) => {
-  console.log("reset password");
   try {
     const resetPasswordToken = crypto
       .createHash("sha256")
@@ -721,13 +711,8 @@ exports.ResetPassword = async (req, res) => {
 exports.DeleteAccount = async (req, res) => {
   try {
     const { userId } = req.body;
-
     let userExist = await User.findOne({ _id: userId });
-
-    console.log(userId);
-
     const filter = { _id: userId };
-
     const update = {
       isDeleted: true,
       deletedAt: Date(),
