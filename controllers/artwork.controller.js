@@ -176,25 +176,18 @@ exports.UpdateArtwork = async (req, res) => {
 exports.DeleteArtwork = async (req, res) => {
   try {
     const { itemId } = req.body;
-    let art = await Artwork.find({ _id: itemId, isDeleted: false });
-
-    if (!art) {
-      return res.status(400).send({
-        status: false,
-        message: "This artwork has already been deleted.",
+    if (req.body && itemId) {
+      const response = await Artwork.deleteOne({
+        _id: itemId,
       });
+      return res
+        .status(200)
+        .send({ status: true, message: "Deleted successfully." });
+    } else {
+      return res
+        .status(400)
+        .send({ sataus: false, message: "Something went wrong!" });
     }
-
-    const filter = { _id: itemId };
-    const update = {
-      isDeleted: true,
-      deletedAt: Date(),
-    };
-
-    let doc = await Artwork.findOneAndUpdate(filter, update, { new: true });
-    return res
-      .status(200)
-      .send({ status: true, message: "Deleted Successfully." });
   } catch (error) {
     console.error(error);
     return res

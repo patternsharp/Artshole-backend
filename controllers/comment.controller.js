@@ -6,6 +6,7 @@ const Collection = require("../models/Collection");
 exports.AddComment = async (req, res) => {
   try {
     const { artworkId, collectionId, pCommentId, author, message } = req.body;
+    
     let one_comment = new Comment({
       artworkId: artworkId,
       collectionId: collectionId,
@@ -27,6 +28,8 @@ exports.AddComment = async (req, res) => {
     }
 
     await one_comment.save();
+
+    await one_comment.populate('author');
 
     return res.status(200).send({
       status: true,

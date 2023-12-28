@@ -205,7 +205,7 @@ exports.SignUp = async (req, res) => {
       if (user.screenName === screenName) {
         return res
           .status(400)
-          .send({ status: false, message: "ScreenName already exists." });
+          .send({ status: false, message: "Display Name already exists." });
       } else if (user.email === email) {
         return res
           .status(400)
